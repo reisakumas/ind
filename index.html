@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet"> 
+
+    <style>
+    
+    body{
+      background-color: white;
+      color: black;
+      font-family: 'Quicksand', sans-serif;
+      background-color:#eeeeee;
+      }
+      
+      #container{
+        background-color:#fff;
+        margin-left: auto;
+        margin-right:auto;
+        margin-top:20px;
+        width:500px;
+        padding:5px;
+        border:1px #e4e4e4 solid;
+      }
+      
+    label{
+    padding: 2px 2px 2px 0;
+    display: inline-block;
+    }
+    
+    input{
+      padding: 2px 2px 2px 0;
+      text-align: center;
+      width:40%;
+    }
+      
+    </style>
+    
+    <script type="text/javascript">
+    function SaveInfo() {
+    validateControls();
+    }
+    function validateControls() {
+    // first name
+    var fname = document.getElementById("fname")
+    if (fname.value == "") {
+        window.alert("please enter your first name");
+        fname.focus();
+        return false;
+    }
+    // middle name
+    var fname = document.getElementById("mname")
+    if (fname.value == "") {
+        window.alert("please enter your middle name");
+        fname.focus();
+        return false;
+    }
+    // last name
+    var lname = document.getElementById("lname")
+    if (lname.value == "") {
+        window.alert("please enter your last name");
+        lname.focus();
+        return false;
+    }
+    // email
+    var email = document.getElementById("email")
+    if (email.value == "") {
+        window.alert("please enter your valid email Id");
+        email.focus();
+        return false;
+    }
+    // birth
+    var dob = document.getElementById("bd")
+    if (dob.value == "") {
+        window.alert("please enter your Birthdate");
+        dob.focus();
+        return false;
+    }
+    // address
+    var fname = document.getElementById("address")
+    if (fname.value == "") {
+        window.alert("please enter your address");
+        fname.focus();
+        return false;
+    }
+    // address
+    var address = document.getElementById("address")
+    if (address.value == "") {
+        window.alert("please enter your address details");
+        address.focus();
+        return false;
+    }
+    // user
+    var password = document.getElementById("username")
+    if (password.value == "") {
+        window.alert("please enter your username");
+        password.focus();
+        return false;
+    }
+    // password
+    var password = document.getElementById("password")
+    if (password.value == "") {
+        window.alert("please enter your password");
+        password.focus();
+        return false;
+    }
+
+    getControlValues();
+
+}
+   </script>
+    
+  </head>
+  
+  <body>
+  
+  <div id="container">
+  
+    <h3 style="text-align:center;">Registration page</h3>
+    
+    <center>
+    <label for="fname">First Name:</label> <input type="text" id="fname" name="firstname" maxlength="25" placeholder="Enter your first name"> <br><br>
+    <label for="mname">Middle Name:</label> <input type="text" id="mname" name="middlename" maxlength="25" placeholder="Enter your middle name"> <br><br>
+    <label for="lname">Last Name:</label> <input type="text" id="lname" name="lastname" maxlength="25" placeholder="Enter your last name"> <br><br>
+    <label for="bd">Birthdate:</label> <input type="Date" id="bd" name="bd"> <br><br>
+    <label for="address">Address:</label> <textarea name="address" id="address" cols="25" maxlength="100" rows="6"></textarea> <br><br>
+    <label for="email">Email:</label> <input type="email" id="email" name="email"> <br><br>
+    <label for="user">Username:</label>  <input type="text" placeholder="username" maxlength="8"/> <br> <br>
+    <label for="password">Password:</label> <input type="password" placeholder="password" maxlength="10"/> <br><br>
+      <input type="submit" value="Register" onclick="SaveInfo()">
+    
+    </center>
+    </div>
+    
+    
+
+  </body>
+</html>
